@@ -2,11 +2,12 @@ module.exports = {
   root: true, // 表明这就是根目录了，停止去父级目录中寻找配置
   parserOptions: {
     // 此项是用来指定javaScript语言类型和风格，sourceType用来指定js导入的方式，默认是script，此处设置为module，指某块导入方式
-    parser: 'babel-eslint', // 此项是用来指定eslint解析器的，解析器必须符合规则，babel-eslint解析器是对babel解析器的包装使其与ESLint解析
+    parser: '@babel/eslint-parser',
+    // parser: 'babel-eslint', // 此项是用来指定eslint解析器的，解析器必须符合规则，babel-eslint解析器是对babel解析器的包装使其与ESLint解析
     sourceType: 'module' // "script" (默认) 或 "module"（如果你的代码是 ECMAScript 模块)
   },
   env: {
-    //用来预定义全局环境变量，常用的有browser，es6,node,jest,jquery
+    // 用来预定义全局环境变量，常用的有browser，es6,node,jest,jquery
     browser: true,
     node: true,
     es6: true
@@ -31,8 +32,8 @@ module.exports = {
       {
         singleline: 10,
         multiline: {
-          max: 1,
-          allowFirstLine: false
+          max: 1
+          // allowFirstLine: false
         }
       }
     ],
